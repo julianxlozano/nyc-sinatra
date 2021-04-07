@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'pry'
 
 describe "Figure" do
   before do 
@@ -27,6 +28,7 @@ describe "Figure" do
   it "has many titles" do 
     @figure.titles << @mayor
     @figure.titles << @councilman
+    binding.pry
     expect(@figure.titles).to include(@mayor)
     expect(@figure.titles).to include(@councilman)
   end
